@@ -10,7 +10,8 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
-    path: "products", component: ProductCrudComponent
+    path: "products", 
+    component: ProductCrudComponent
   }
 ];
 
