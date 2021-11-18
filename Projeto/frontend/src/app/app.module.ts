@@ -1,9 +1,11 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
+import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatListModule } from '@angular/material/list';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatButtonModule } from '@angular/material/button';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -17,8 +19,6 @@ import { ForDirective } from './directives/for.directive';
 import { RedDirective } from './directives/red.directive';
 import { HomeComponent } from './views/home/home.component';
 import { ProductCrudComponent } from './views/product-crud/product-crud.component';
-import { MatSnackBarModule } from '@angular/material/snack-bar';
-
 
 
 @NgModule({
@@ -42,7 +42,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     MatListModule,
     MatCardModule,
     MatButtonModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
