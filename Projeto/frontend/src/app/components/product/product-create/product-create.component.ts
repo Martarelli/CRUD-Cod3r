@@ -14,6 +14,7 @@ export class ProductCreateComponent implements OnInit {
     name: '',
     price: 0
   }
+  
 /*   propLegal = "qualquer" */
 
   constructor(private ProductService: ProductService,
