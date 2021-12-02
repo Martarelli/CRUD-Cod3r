@@ -19,6 +19,11 @@
       "name": "Casa Apto",
       "price": "500",
       "id": 4
+    },
+    {
+      "name": "Para exclusão",
+      "price": "9.99",
+      "id": 5
     }
   ]
 }
