@@ -22,8 +22,7 @@ export class ProductDeleteComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    //const id = +this.route.snapshot.paramMap.get('id')
-    let id = 1
+    const id = this.route.snapshot.paramMap.get('id') || ''
     console.log(id)
    
     this.productService.readById(id).subscribe(product => {this.product = product
@@ -31,10 +30,10 @@ export class ProductDeleteComponent implements OnInit {
   }
 
   deleteProduct(): void{
-   //this.productService.delete(this.product.id).subscribe(() => this.productService.showMessage('Produto excluído com sucesso')
+    this.productService.delete(this.product.id || '').subscribe(() => this.productService.showMessage('Produto excluído com sucesso'))
       
     this.router.navigate(['/products']);
-   }
+  }
 
   cancel(): void{
     this.router.navigate(['/products']);

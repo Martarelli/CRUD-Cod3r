@@ -13,6 +13,7 @@ import { ProductService } from './../product.service';
 export class ProductUpdateComponent implements OnInit {
 
   product: Product = {
+    id: '',
     name: '',
     price: 0
   }  
@@ -24,8 +25,8 @@ export class ProductUpdateComponent implements OnInit {
     ){ }
 
   ngOnInit(): void {
-    //const id = +this.route.snapshot.paramMap.get('id')
-    let id = 1
+    const id = this.route.snapshot.paramMap.get('id') || ''
+    // let id = '1'
     console.log(id)
    
     this.productService.readById(id).subscribe(product => {this.product = product});
